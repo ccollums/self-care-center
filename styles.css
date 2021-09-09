@@ -1,3 +1,96 @@
+.body {
+  font-family: 'Quicksand', sans-serif;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-attachment: fixed;
+}
+
+.font {
+  font-family: Quicksand, sans-serif;
+}
+
+.light-yellow {
+  color: #f7e4bf;
+}
+
+.light-blue {
+  color: #78a7c6;
+}
+
+.dark-blue {
+  color: #134d71;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #000000;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10%;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.container {
+  margin: auto;
+  background-color: white;
+  border: 0;
+  border-radius: 15px;
+  width: 50%;
+  height: 200%;
+  padding: 1%;
+  position: relative;
+}
+
+.white-box2 {
+  background-color: white;
+  margin: auto;
+  padding: 3%;
+  width: 70%;
+  border-radius: 15px;
+  margin-top: 10%;
+}
+
+input {
+margin: 10px 10px 20px 90px;
+}
+
+label {
+  font-style: italic;
+}
+
+.recieve-msg-button {
+  background: #134d71;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  width: 175px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+  width: 80px;
+}
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
