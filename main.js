@@ -4,8 +4,6 @@ var recieveMessageButton = document.querySelector('.recieve-msg-button');
 var meditatingIcon = document.querySelector('img');
 var showRandomMessage = document.querySelector('.random-message');
 var whiteBoxContainer = document.querySelector('.container2');
-// var radioButtons = document.querySelectorAll('input');
-var radioButtons = document.querySelectorAll('input[name = "radio"]');
 
 
 var affirmations = ['I forgive myself and set myself free.',
@@ -38,49 +36,22 @@ var mantras = ['Breathing in, I send myself love. Breathing out, I send love to 
 'Onward and upward.',
 'I am the sky, the rest is weather.']
 
-
-// affirmationButton.addEventListener('click', produceRandomMessage);
-// mantrasButton.addEventListener('click', selectMantrasButton);
 recieveMessageButton.addEventListener('click', produceRandomMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
  }
 
- // function createRandomAffirmation() {
- //   var value;
- //   for (var i = 0; i < radioButtons.length; i++) {
- //     if (radioButtons[i].value.checked === 'affirmation-button'); {
- //       // if (radioButtons[i].id === 'affirmation-button' && radioButtons[i].checked); {
- //       //
- //       // value = radioButtons[i].value;
- //       showRandomMessage.innerText = affirmations[getRandomIndex(affirmations)];
- //      }
- //     }
- //   }
-
-   function createRandomAffirmation() {
-     if (affirmationButton.checked === true) {
-       showRandomMessage.innerText = affirmations[getRandomIndex(affirmations)];
-     } else if (mantrasButton.checked === true) {
-       showRandomMessage.innerText = mantras[getRandomIndex(mantras)];
-     }
-   }
-
-
-
- function createRandomMantra() {
-   showRandomMessage.innerText = mantras[getRandomIndex(mantras)];
- }
-
-function selectAffirmationButton() {
-
+function createMessageFromSelectedButton() {
+  if (affirmationButton.checked === true) {
+    showRandomMessage.innerText = affirmations[getRandomIndex(affirmations)];
+  } else if (mantrasButton.checked === true) {
+    showRandomMessage.innerText = mantras[getRandomIndex(mantras)];
+  } else {
+    meditatingIcon.classList.remove('hidden');
+    showRandomMessage.classList.add('hidden');
+  }
 }
-
-function selectMantrasButton() {
-
-}
-
 
 function hideMeditatingIcon() {
   meditatingIcon.classList.add('hidden');
@@ -93,5 +64,5 @@ function unhideMessageText() {
 function produceRandomMessage() {
   hideMeditatingIcon();
   unhideMessageText();
-  createRandomAffirmation();
+  createMessageFromSelectedButton();
 }
