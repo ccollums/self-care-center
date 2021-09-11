@@ -55,7 +55,7 @@ function createMessageFromSelectedButton() {
   } else if (mantrasButton.checked === true) {
     showRandomMessage.innerText = mantras[getRandomIndex(mantras)];
   } else {
-      hideUnhideThings(showRandomMessage, meditatingIcon);
+      hideUnhideThings(meditatingIcon, showRandomMessage);
   }
 }
 
@@ -69,10 +69,12 @@ function loadLogInPage() {
 }
 
 function submitUserLogIn() {
-  event.preventDefault();
-  hideUnhideThings(mainPage, logInPage);
-  personalizedGreeting.classList.remove('hidden');
-  personalizedGreeting.innerText = `Namaste, ${userLogInInput.value}`; 
+  if (userLogInInput.value) {
+    event.preventDefault();
+    hideUnhideThings(mainPage, logInPage);
+    personalizedGreeting.classList.remove('hidden');
+    personalizedGreeting.innerText = `Namaste, ${userLogInInput.value}`;
+  }
 }
 
 function produceRandomMessage() {
