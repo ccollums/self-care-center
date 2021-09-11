@@ -1,9 +1,14 @@
 var affirmationButton = document.querySelector('#affirmation-button');
 var mantrasButton = document.querySelector('#mantras-button');
-var recieveMessageButton = document.querySelector('.recieve-msg-button');
+var recieveMessageButton = document.querySelector('.recieve-msg');
 var meditatingIcon = document.querySelector('img');
 var showRandomMessage = document.querySelector('.random-message');
 var whiteBoxContainer = document.querySelector('.container2');
+var logInPage = document.querySelector('.log-in-page');
+var userLogInInput = document.querySelector('#user-log-in');
+var submitButton = document.querySelector('.submit');
+var mainPage = document.querySelector('.main-page');
+var personalizedGreeting = document.querySelector('.greet-user');
 
 
 var affirmations = ['I forgive myself and set myself free.',
@@ -36,7 +41,9 @@ var mantras = ['Breathing in, I send myself love. Breathing out, I send love to 
 'Onward and upward.',
 'I am the sky, the rest is weather.']
 
+window.addEventListener('load', loadLogInPage);
 recieveMessageButton.addEventListener('click', produceRandomMessage);
+submitButton.addEventListener('click', submitUserLogIn);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -48,21 +55,27 @@ function createMessageFromSelectedButton() {
   } else if (mantrasButton.checked === true) {
     showRandomMessage.innerText = mantras[getRandomIndex(mantras)];
   } else {
-    meditatingIcon.classList.remove('hidden');
-    showRandomMessage.classList.add('hidden');
+      hideUnhideThings(showRandomMessage, meditatingIcon);
   }
 }
 
-function hideMeditatingIcon() {
-  meditatingIcon.classList.add('hidden');
+function hideUnhideThings(show, hide) {
+  show.classList.remove('hidden');
+  hide.classList.add('hidden');
 }
 
-function unhideMessageText() {
-  showRandomMessage.classList.remove('hidden');
+function loadLogInPage() {
+  hideUnhideThings(logInPage, mainPage);
+}
+
+function submitUserLogIn() {
+  event.preventDefault();
+  hideUnhideThings(mainPage, logInPage);
+  personalizedGreeting.classList.remove('hidden');
+  personalizedGreeting.innerText = `Namaste, ${userLogInInput.value}`; 
 }
 
 function produceRandomMessage() {
-  hideMeditatingIcon();
-  unhideMessageText();
+  hideUnhideThings(showRandomMessage, meditatingIcon);
   createMessageFromSelectedButton();
 }
