@@ -31,3 +31,6 @@ site is meant to produce a random affirmation or mantra (your choice) to inspire
 <img width="1407" alt="Screen Shot 2021-09-11 at 10 50 22 PM" src="https://user-images.githubusercontent.com/86894344/132972930-02e49171-02d8-4926-b748-9d18df82202b.png">
 
 - Your message will then come up at the bottom of the screen. Take in those words for your daily positivity! :)
+
+
+<img width="1349" alt="Screen Shot 2021-09-11 at 11 11 37 PM" src="https://user-images.githubusercontent.com/86894344/132973018-25fcb1e7-808f-4d05-af86-b3987e87e9f7.png">
