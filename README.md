@@ -1,24 +1,25 @@
 # Self Care Center
+Contributor's Carly Collums
+Github: https://github.com/ccollums
+Site URL: https://ccollums.github.io/self-care-center/
+Technologies Used: Atom - text editor
+Languages: Javascript, HTML, CSS
+
 ## Overview
 How can I care for myself? One way is with affirmations and mantras!
 Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Mantras are repetitive phrases that are repeated again and again during mindfulness practices. The Self Care Center
+site is meant to produce a random affirmation or mantra (your choice) to inspire you throughout your day.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
+## Installation/Setup Instruction's
 - Fork this project to your own Github account
 - Clone the repository to your local machine
 - `cd` into the project
-- Read this README thoroughly, then begin working!
+- run 'open index.html' in your terminal to open the site
 
+## Site Use
+- Upon loading the site you will land on a user log in page. Enter your name into the input box and hit submit.
+![](Screen Shot 2021-09-11 at 10.49.58 PM)
+- This will then take you to the main page of the site which will feature two buttons to choose from. One for an affirmation and one for a mantra. Pick which message you would like to see and then click the receive message button.
+![](Screen Shot 2021-09-11 at 10.50.22 PM)
+- Your message will then come up at the bottom of the screen. Take in those words for your daily positivity! :)
